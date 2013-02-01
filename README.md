@@ -8,4 +8,6 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 
 ## Screenshot
 
-![Application Gallery View](https://raw.github.com/bsorrentino/cordova-poc/master/screenshot/device-01.png)
+[Application Gallery View](https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-app.png)
+
+[Application Info Popup](https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-info.png)
