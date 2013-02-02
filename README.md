@@ -9,14 +9,26 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 ## Screenshot
 
 <table>
+
 <tr>
 <td>
  <h5>App gallery</h5><br>	
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-app.png">
 </td>
 <td>
- <h5>About/Help</h5><br>	
+ <h5>About/Help</h5><hr>	
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-info.png">
+</td>
+</tr>
+
+<tr>
+<td>
+ <h5>Dropbox View</h5><br>	
+ <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-dbox-02.png">
+</td>
+<td>
+ <h5>Dropbox download & install</h5><hr>	
+ <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-dbox-03.png">
 </td>
 </tr>
 </table>
