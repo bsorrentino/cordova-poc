@@ -25,11 +25,11 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 
 <tr>
 <td>
- <h5>Dropbox View</h5><hr>	
+ <h5>Dropbox - Pull to refresh</h5><hr>	
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-dbox-02.png">
 </td>
 <td>
- <h5>Dropbox download & install</h5><hr>	
+ <h5>Dropbox - Download & Install</h5><hr>	
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-dbox-03.png">
 </td>
 </tr>
