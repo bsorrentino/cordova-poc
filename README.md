@@ -12,7 +12,7 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 
 <tr>
 <td>
- <h5>App gallery</h5><br>	
+ <h5>App gallery</h5><hr>	
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-app.png">
 </td>
 <td>
@@ -23,7 +23,7 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 
 <tr>
 <td>
- <h5>Dropbox View</h5><br>	
+ <h5>Dropbox View</h5><hr>	
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-dbox-02.png">
 </td>
 <td>
