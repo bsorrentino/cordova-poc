@@ -11,10 +11,11 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 <table>
 <tr>
 <td>
- <h5>App gallery</h5><hr>	
+ <h5>App gallery</h5><br>	
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-app.png">
 </td>
 <td>
+ <h5>About/Help</h5><br>	
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-info.png">
 </td>
 </tr>
