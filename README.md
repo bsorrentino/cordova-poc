@@ -11,6 +11,7 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 <table>
 <tr>
 <td>
+ <h5>App gallery</h5><hr>	
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-app.png">
 </td>
 <td>
