@@ -8,17 +8,17 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 
 ## Technical Note
 
-<b><u>Cordova 2.0.0</u> is supported. </b>
+<b>Cordova 2.0.0 is supported. </b>
 
-<b><u>ChildBrowser 2.0.0</u> plugin is added by default</b>
+<b>ChildBrowser 2.0.0 plugin is added by default</b>
 
 ## On line source
 
-<b><u>Dropbox</u> is supported</b>
+<b>Dropbox is supported</b>
 
 ## Off line source
 
-<b><u>SD Card</u> is supported</b>
+<b>SD Card is supported</b>
 
 ## Screenshot
 
