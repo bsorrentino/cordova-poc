@@ -18,7 +18,7 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 
 ## Off line source
 
-<b>SD Card</b>
+<b>SD Card is supportd</b>
 
 ## Screenshot
 
