@@ -1,7 +1,7 @@
 # DESCRIPTION
 
-Cordova-POC has been created to help to do demo of your Cordova/Phonegap app to customer on-the-fly. 
-Idea is to deploy Html5 application bundle (i.e. zip file) directly on device from either on-line than off-line source. 
+Cordova-POC has been created to help to do demo of your Cordova/Phonegap app to customer on-the-fly.
+Idea is to deploy Html5 application bundle (i.e. zip file) directly on device from a source either, on-line than off-line. 
 Moreover Cordova-POC collects the deployed applications, providing a personal applications gallery, always ready to run.
 
 ## Technical Note
