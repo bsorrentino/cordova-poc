@@ -4,6 +4,11 @@ Cordova-POC has been created to help to do demo of your Cordova/Phonegap app to 
 Idea is to deploy Html5 application bundle (i.e. zip file) directly on device from either on-line than off-line source. 
 Moreover Cordova-POC collects the deployed applications, providing a personal applications gallery, always ready to run.
 
+## Technical Note
+
+Cordova version 2.0.0 is supported. 
+
+ChildBrowser 2.0.0 plugin is added by default
 
 # ANDROID 
 
