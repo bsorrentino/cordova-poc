@@ -6,9 +6,9 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 
 ## Technical Note
 
-Cordova version 2.0.0 is supported. 
+<b>Cordova version 2.0.0 is supported. </b>
 
-ChildBrowser 2.0.0 plugin is added by default
+<b>ChildBrowser 2.0.0 plugin is added by default</b>
 
 # ANDROID 
 
