@@ -1,3 +1,17 @@
+<table>
+
+<tr>
+<td>
+ <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/hi-res-icon@512.png">
+</td>
+<td>
+ <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/hi-res-icon2@512.png">
+</td>
+</tr>
+
+</table>
+
+
 # DESCRIPTION
 
 Cordova-POC has been created to help to do demo of your Cordova/Phonegap app to customer on-the-fly.
