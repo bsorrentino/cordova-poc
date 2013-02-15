@@ -2,10 +2,10 @@
 
 <tr>
 <td>
- <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/hi-res-icon@512.png">
+ <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/hi-res-icon2@512.png">
 </td>
 <td>
- <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/hi-res-icon2@512.png">
+ <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/hi-res-icon@512.png">
 </td>
 </tr>
 
