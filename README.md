@@ -60,3 +60,8 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 </td>
 </tr>
 </table>
+
+# IOS APP
+
+_COMING SOON_
+
