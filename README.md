@@ -18,7 +18,7 @@ Cordova-POC has been created to help to do demo of your Cordova/Phonegap app to 
 Idea is to deploy Html5 application bundle (i.e. zip file) directly on device from a source either, on-line than off-line. 
 Moreover Cordova-POC collects the deployed applications, providing a personal applications gallery, always ready to run.
 
-# ANDROID APP - Version Code: 7 - Version Name: 2.0-cordova-2.5.0
+# ANDROID APP - Version Code: 7 - Name: 2.0-cordova-2.5.0
 
 ## Technical Note
 
