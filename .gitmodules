@@ -1,0 +1,3 @@
+[submodule "jsfiddle"]
+	path = jsfiddle
+	url = https://github.com/bsorrentino/JFiddle-Mobile.git
