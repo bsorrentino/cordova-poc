@@ -40,15 +40,10 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 </td>
 </tr>
 
-<!--
-<td>
- <h5>About/Help</h5><hr>	
- <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-info.png">
-</td>
 </tr>
--->
 
 <tr>
+
 <td>
  <h5>Dropbox - Pull to refresh</h5><hr>	
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-dbox-02.png">
@@ -58,6 +53,7 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-dbox-03.png">
 </td>
 </tr>
+
 </table>
 -->
 
@@ -76,20 +72,15 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 </td>
 </tr>
 
-<!--
+<tr>
 <td>
  <h5>Dropbox</h5><hr>	
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/IPad-Screenshot-2.png">
 </td>
-</tr>
--->
 
-<tr>
 <td>
  <h5>JSFiddle</h5><hr>	
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/IPad-Screenshot-3.png">
-</td>
-<td>
 </td>
 </tr>
 </table>
