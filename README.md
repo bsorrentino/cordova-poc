@@ -24,6 +24,8 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 ## Screenshot
 
 ### IPHONE
+
+<!--
 <table>
 
 <tr>
@@ -57,6 +59,7 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 </td>
 </tr>
 </table>
+-->
 
 ### IPAD
 <table>
@@ -69,7 +72,7 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 
 <td>
  <h5>Choose Version</h5><hr>	
- <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/IPad-Screenshot-4.png">
+ <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/IPad-Screenshot-5.png">
 </td>
 </tr>
 
@@ -87,8 +90,6 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/IPad-Screenshot-3.png">
 </td>
 <td>
- <h5>Dropbox - Download & Install</h5><hr>	
- <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-dbox-03.png">
 </td>
 </tr>
 </table>
