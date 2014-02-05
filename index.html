@@ -1,83 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <title>Cordova-poc by bsorrentino</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>Cordova-poc</h1>
-        <h2>mobile application to provides Cordova Proof Of Concept</h2>
-        <a href="https://github.com/bsorrentino/cordova-poc" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/bsorrentino/cordova-poc">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/bsorrentino/cordova-poc/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/bsorrentino/cordova-poc/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+    <div class="wrapper">
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+      <section>
+        <div id="title">
+          <h1>Cordova-poc</h1>
+          <p>mobile application to provides Cordova Proof Of Concept</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/bsorrentino">bsorrentino</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+        <table><tr>
+<td>
+ <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/hi-res-icon2@512.png">
+</td>
+<td>
+ <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/hi-res-icon@512.png">
+</td>
+</tr></table><h1>
+<a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>DESCRIPTION</h1>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>Cordova-POC has been created to help to do demo of your Cordova/Phonegap app to customer on-the-fly.
+Idea is to deploy Html5 application bundle (i.e. zip file) directly on device from a source either, on-line than off-line. 
+Moreover Cordova-POC collects the deployed applications, providing a personal applications gallery, always ready to run.</p>
+
+<h1>
+<a name="ios-app-universal" class="anchor" href="#ios-app-universal"><span class="octicon octicon-link"></span></a>IOS APP (Universal)</h1>
+
+<h2>
+<a name="screenshot" class="anchor" href="#screenshot"><span class="octicon octicon-link"></span></a>Screenshot</h2>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="iphone" class="anchor" href="#iphone"><span class="octicon octicon-link"></span></a>IPHONE</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
 
 <h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a name="ipad" class="anchor" href="#ipad"><span class="octicon octicon-link"></span></a>IPAD</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<table>
+<tr>
+<td>
+ <h5>
+<a name="apps-gallery" class="anchor" href="#apps-gallery"><span class="octicon octicon-link"></span></a>Apps gallery</h5>
+<hr>
+<img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/IPad-Screenshot-1.png">
+</td>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<td>
+ <h5>
+<a name="choose-version" class="anchor" href="#choose-version"><span class="octicon octicon-link"></span></a>Choose Version</h5>
+<hr>
+<img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/IPad-Screenshot-5.png">
+</td>
+</tr>
+<tr>
+<td>
+ <h5>
+<a name="dropbox" class="anchor" href="#dropbox"><span class="octicon octicon-link"></span></a>Dropbox</h5>
+<hr>
+<img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/IPad-Screenshot-2.png">
+</td>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </section>
+<td>
+ <h5>
+<a name="jsfiddle" class="anchor" href="#jsfiddle"><span class="octicon octicon-link"></span></a>JSFiddle</h5>
+<hr>
+<img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/IPad-Screenshot-3.png">
+</td>
+</tr>
+</table><h1>
+<a name="android-app" class="anchor" href="#android-app"><span class="octicon octicon-link"></span></a>ANDROID APP</h1>
 
-        <aside id="sidebar">
-          <a href="https://github.com/bsorrentino/cordova-poc/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/bsorrentino/cordova-poc/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+<p>Version: 2.2-cordova-3.1.0 <a href="https://play.google.com/store/apps/details?id=org.bsc">see it on Google Play</a></p>
 
-          <p class="repo-owner"><a href="https://github.com/bsorrentino/cordova-poc"></a> is maintained by <a href="https://github.com/bsorrentino">bsorrentino</a>.</p>
+<h2>
+<a name="technical-note" class="anchor" href="#technical-note"><span class="octicon octicon-link"></span></a>Technical Note</h2>
 
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+<p><b>Cordova 3.1.0, 2.5.0 and 2.0.0 are supported. </b></p>
+
+<h2>
+<a name="on-line-source" class="anchor" href="#on-line-source"><span class="octicon octicon-link"></span></a>On line source</h2>
+
+<p><b>Dropbox is supported</b>
+<b>JSFiddle is supported. Preview, Download</b></p>
+
+<h2>
+<a name="off-line-source" class="anchor" href="#off-line-source"><span class="octicon octicon-link"></span></a>Off line source</h2>
+
+<p><b>SD Card is supported</b></p>
+
+<h2>
+<a name="screenshot-1" class="anchor" href="#screenshot-1"><span class="octicon octicon-link"></span></a>Screenshot</h2>
+
+<table>
+<tr>
+<td>
+ <h5>
+<a name="app-gallery" class="anchor" href="#app-gallery"><span class="octicon octicon-link"></span></a>App gallery</h5>
+<hr>
+<img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-app.png">
+</td>
+
+<td>
+ <h5>
+<a name="choose-version-1" class="anchor" href="#choose-version-1"><span class="octicon octicon-link"></span></a>Choose Version</h5>
+<hr>
+<img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-select-version.png">
+</td>
+</tr>
+<tr>
+<td>
+ <h5>
+<a name="dropbox---pull-to-refresh" class="anchor" href="#dropbox---pull-to-refresh"><span class="octicon octicon-link"></span></a>Dropbox - Pull to refresh</h5>
+<hr>
+<img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-dbox-02.png">
+</td>
+<td>
+ <h5>
+<a name="dropbox---download--install" class="anchor" href="#dropbox---download--install"><span class="octicon octicon-link"></span></a>Dropbox - Download &amp; Install</h5>
+<hr>
+<img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-dbox-03.png">
+</td>
+</tr>
+</table>
+      </section>
+
     </div>
-
-  
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
   </body>
 </html>
