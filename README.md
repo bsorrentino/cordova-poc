@@ -21,6 +21,8 @@ Moreover Cordova-POC collects the deployed applications, providing a personal ap
 
 # IOS APP (Universal)
 
+ Version 1.0 [see it on App Store](https://itunes.apple.com/us/app/cordova-poc/id791375853?l=it&ls=1&mt=8)
+ 
 ## Screenshot
 
 ### IPHONE
