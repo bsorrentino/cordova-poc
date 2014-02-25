@@ -1,3 +1,6 @@
 [submodule "jsfiddle"]
 	path = jsfiddle
 	url = https://github.com/bsorrentino/JFiddle-Mobile.git
+[submodule "cli"]
+	path = cli
+	url = https://github.com/bsorrentino/cordova-poc-cli.git
