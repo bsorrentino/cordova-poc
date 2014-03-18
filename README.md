@@ -18,7 +18,7 @@ Cordova-POC has been created to help to do demo of your Cordova/Phonegap app to 
 
 # IOS APP (Universal)
 
- Version 1.0 [see it on App Store](https://itunes.apple.com/us/app/cordova-poc/id791375853?l=it&ls=1&mt=8)
+ Version 1.1 [see it on App Store](https://itunes.apple.com/us/app/cordova-poc/id791375853?l=it&ls=1&mt=8)
  
 ## Screenshot
 
