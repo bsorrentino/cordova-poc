@@ -18,8 +18,8 @@ Cordova-POC has been created to help to do demo of your Cordova/Phonegap app to 
 
 # IOS APP (Universal)
 
- Version 1.1 [see it on App Store](https://itunes.apple.com/us/app/cordova-poc/id791375853?l=it&ls=1&mt=8)
- 
+ Version 1.4 [see it on App Store](https://itunes.apple.com/us/app/cordova-poc/id791375853?l=it&ls=1&mt=8)
+
 ## Screenshot
 
 ### IPHONE
@@ -29,12 +29,12 @@ Cordova-POC has been created to help to do demo of your Cordova/Phonegap app to 
 
 <tr>
 <td>
- <h5>App gallery</h5><hr>	
+ <h5>App gallery</h5><hr>
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-app.png">
 </td>
 
 <td>
- <h5>Choose Version</h5><hr>	
+ <h5>Choose Version</h5><hr>
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-select-version.png">
 </td>
 </tr>
@@ -44,11 +44,11 @@ Cordova-POC has been created to help to do demo of your Cordova/Phonegap app to 
 <tr>
 
 <td>
- <h5>Dropbox - Pull to refresh</h5><hr>	
+ <h5>Dropbox - Pull to refresh</h5><hr>
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-dbox-02.png">
 </td>
 <td>
- <h5>Dropbox - Download & Install</h5><hr>	
+ <h5>Dropbox - Download & Install</h5><hr>
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-dbox-03.png">
 </td>
 </tr>
@@ -61,36 +61,36 @@ Cordova-POC has been created to help to do demo of your Cordova/Phonegap app to 
 
 <tr>
 <td>
- <h5>Apps gallery</h5><hr>	
+ <h5>Apps gallery</h5><hr>
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/IPad-Screenshot-1.png">
 </td>
 
 <td>
- <h5>Choose Version</h5><hr>	
+ <h5>Choose Version</h5><hr>
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/IPad-Screenshot-5.png">
 </td>
 </tr>
 
 <tr>
 <td>
- <h5>Dropbox</h5><hr>	
+ <h5>Dropbox</h5><hr>
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/IPad-Screenshot-2.png">
 </td>
 
 <td>
- <h5>JSFiddle</h5><hr>	
+ <h5>JSFiddle</h5><hr>
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/IPad-Screenshot-3.png">
 </td>
 </tr>
 </table>
 
-# ANDROID APP 
+# ANDROID APP
 
- Version: 2.2-cordova-3.1.0 [see it on Google Play](https://play.google.com/store/apps/details?id=org.bsc)
+ Version: 2.4-cordova-3.5.0 [see it on Google Play](https://play.google.com/store/apps/details?id=org.bsc)
 
 ## Technical Note
 
-<b>Cordova 3.1.0, 2.5.0 and 2.0.0 are supported. </b>
+<b>Cordova 3.5.0, 3.0.0 and 2.5.0 are supported. </b>
 
 ## On line source
 
@@ -107,19 +107,19 @@ Cordova-POC has been created to help to do demo of your Cordova/Phonegap app to 
 
 <tr>
 <td>
- <h5>App gallery</h5><hr>	
+ <h5>App gallery</h5><hr>
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-app.png">
 </td>
 
 <td>
- <h5>Choose Version</h5><hr>	
+ <h5>Choose Version</h5><hr>
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-select-version.png">
 </td>
 </tr>
 
 <!--
 <td>
- <h5>About/Help</h5><hr>	
+ <h5>About/Help</h5><hr>
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-info.png">
 </td>
 </tr>
@@ -127,13 +127,12 @@ Cordova-POC has been created to help to do demo of your Cordova/Phonegap app to 
 
 <tr>
 <td>
- <h5>Dropbox - Pull to refresh</h5><hr>	
+ <h5>Dropbox - Pull to refresh</h5><hr>
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-dbox-02.png">
 </td>
 <td>
- <h5>Dropbox - Download & Install</h5><hr>	
+ <h5>Dropbox - Download & Install</h5><hr>
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/android-dbox-03.png">
 </td>
 </tr>
 </table>
-
