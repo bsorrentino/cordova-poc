@@ -1,0 +1,61 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<!--
+`cordova-accellerator`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="cordova-accellerator">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+      <div class="col s12">
+
+      <div class="card z-depth-1 indigo lighten-5">
+          <div class="card-content waves-effect waves-block">
+            <span class="card-title activator grey-text text-darken-4" on-tap="reveal" >Toggle Accellerator<i class="material-icons right">more_vert</i></span>
+            <p>Enable accellerator</p>
+
+          </div>
+          
+        <div class="card-reveal indigo darken-1">
+
+            <span class="card-title white-text text-darken-1">Accellerator<i class="material-icons right">close</i></span>    
+          
+            <table>
+              <tbody>
+                <tr>
+                  <td class="yellow-text text-darken-1">X:<span class="white-text text-darken-1" style="margin-left:10px">0.0</span></td>
+                  <td class="yellow-text text-darken-1">Y:<span class="white-text text-darken-1" style="margin-left:10px">0.0</span></td>
+                  <td class="yellow-text text-darken-1">Z:<span class="white-text text-darken-1" style="margin-left:10px">0.0</span></td>
+                </tr>   
+              </tbody>
+          </table>  
+        
+        </div>
+        
+      </div>   
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'cordova-accellerator',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'cordova-accellerator',
+        },
+      },
+      reveal( e ) {
+        console.log( "reveal ", e );
+      }
+    });
+  </script>
+</dom-module>

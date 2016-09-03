@@ -1,0 +1,7 @@
+{
+  "name": "cordova-poc-showcase",
+  "short_name": "cordova-poc-showcase",
+  "description": "cordova showcase",
+  "start_url": "/",
+  "display": "standalone"
+}
