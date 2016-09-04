@@ -1,4 +1,5 @@
 <link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="cordova.html">
 
 <!--
 `cordova-accellerator`
@@ -53,7 +54,7 @@
           value: 'cordova-accellerator',
         },
       },
-      reveal( e ) {
+      reveal: function( e ) {
         console.log( "reveal ", e );
       }
     });

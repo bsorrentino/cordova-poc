@@ -1,4 +1,5 @@
 <link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="cordova.html">
 
 <!--
 `cordova-accellerator`
@@ -46,7 +47,7 @@
           type: Object,
         },
       },
-      ready() {
+      ready: function() {
         console.log( "cordova-device", "ready" );
 
         var _self = this;

@@ -49,12 +49,12 @@
           value: 'Unknown connection',
         },
       },
-      reveal( e ) {
+      reveal: function( e ) {
         console.log( "reveal ", e );
 
         this.check_network();
       },
-      check_network() {
+      check_network: function() {
         var networkState = navigator.network.connection.type;
 
         var states = {};

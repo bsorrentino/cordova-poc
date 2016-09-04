@@ -1,0 +1,13 @@
+{
+  "entrypoint": "index.html",
+  "shell": "",
+  "fragments": [
+  ],
+  "sources": [
+  ],
+  "includeDependencies": [
+    "plugins/**/*",
+    "cordova-js-src/**/*",
+    "cordova_plugins.js"
+  ]
+}
