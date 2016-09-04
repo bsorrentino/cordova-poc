@@ -1,0 +1,77 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<!--
+`cordova-accellerator`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="cordova-device">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      .chip {
+        margin: 2px 10px;
+      }
+    </style>
+      <div class="col s12">
+
+      <div class="card z-depth-1 amber lighten-5">
+        <div class="card-content  waves-effect waves-block">
+            <span class="card-title activator grey-text text-darken-4">Device Info<i class="medium material-icons right" >info_outline</i></span>
+
+            <div>Platform:<span class="chip">[[device.platform]]</span>Version:<span class="chip">[[device.version]]</span></div>
+            <div>UUID:<span class="chip">[[device.uuid]]</span></div>
+            <div>Model:<span class="chip">[[device.model]]</span></div>
+            <div>Screen:<span class="chip">[[screen.width]] x [[screen.height]]</span>Color Depth:<span class="chip">[[screen.colorDepth]]</span></div>
+        </div>
+
+      </div>  
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'cordova-device',
+
+      properties: {
+
+        device: {
+          type: Object,
+        },
+        screen: {
+          type: Object,
+        },
+      },
+      ready() {
+        console.log( "cordova-device", "ready" );
+
+        var _self = this;
+
+        document.addEventListener("deviceready", function() {
+    
+          console.log( "cordova is ready!", device );
+
+          _self.device = device;
+          _self.screen = screen;
+          
+          /*
+          document.getElementById("cordova").innerHTML = device.cordova;
+          document.getElementById("platform").innerHTML = device.platform;
+          document.getElementById("version").innerHTML = device.version;
+          document.getElementById("uuid").innerHTML = device.uuid;
+          document.getElementById("model").innerHTML = device.model;
+          document.getElementById("width").innerHTML = screen.width;
+          document.getElementById("height").innerHTML = screen.height;
+          document.getElementById("colorDepth").innerHTML = screen.colorDepth;
+          */
+
+        }, true);
+
+      }
+    });
+  </script>
+</dom-module>
