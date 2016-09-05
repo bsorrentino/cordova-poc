@@ -1,0 +1,76 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="cordova.html">
+
+<!--
+`cordova-geolacation`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="cordova-geolocation">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      .value  {
+        margin: 0 5px; 
+      }
+    </style>
+      <div class="col s12">
+
+      <div class="card z-depth-1 indigo lighten-5">
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4 " on-tap="reveal">Toggle Geolocation<i class="material-icons right">more_vert</i></span>
+            <p>Enable Geolocation</p>
+
+          </div>
+          
+        <div class="card-reveal  indigo darken-1">
+
+            <span class="card-title white-text text-darken-1" on-tap="dismiss">Geolocation<i class="material-icons right">close</i></span>    
+          
+            <div class="row">
+                <div class="col s12 m6"><span class="yellow-text text-darken-1">Latitude:</span><span class="value white-text text-darken-1">[[position.coords.latitude]]</span></div> 
+                <div class="col s12 m6"><span class="yellow-text text-darken-1">Latitude:</span><span class="value white-text text-darken-1">[[position.coords.longitude]]</span></div> 
+            </div>
+
+        </div>
+        
+      </div> 
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'cordova-geolocation',
+
+      properties: {
+        position: {
+          type: Object,
+          value: { coords:{ latitude:0.0, longitude:0.0 }, timespamp:null},
+        },
+      },
+      _error: function( e ) {
+        console.log( this.is, "error", e.code, e.description );
+      },
+      _success: function( e ) {
+        console.log( "position", e.coords.latitude, this.position.coords.latitude );
+        this.position = e
+      },
+      reveal: function( e ) {
+        console.log( "reveal ", e );
+
+        var onSuccess = this._success.bind(this);
+        var onError   = this._error.bind(this);
+        navigator.geolocation.getCurrentPosition( onSuccess, onError , {});
+
+      },
+      dismiss: function( e ) {
+        console.log( "dismiss ", e );        
+      }
+
+    });
+  </script>
+</dom-module>
