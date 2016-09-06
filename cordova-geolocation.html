@@ -17,7 +17,12 @@
       .value  {
         margin: 0 5px; 
       }
+      .row.margin {
+        margin-bottom: 0px;
+      }
+
     </style>
+      <div class="row margin">
       <div class="col s12">
 
       <div class="card z-depth-1 indigo lighten-5">
@@ -39,6 +44,7 @@
         </div>
         
       </div> 
+      </div>
   </template>
 
   <script>
@@ -52,6 +58,7 @@
           value: { coords:{ latitude:0.0, longitude:0.0 }, timespamp:null},
         },
       },
+      _watchId:null,  
       _error: function( e ) {
         console.log( this.is, "error", e.code, e.description );
       },
@@ -64,11 +71,21 @@
 
         var onSuccess = this._success.bind(this);
         var onError   = this._error.bind(this);
-        navigator.geolocation.getCurrentPosition( onSuccess, onError , {});
+
+        //navigator.geolocation.getCurrentPosition( onSuccess, onError , {});
+
+        this._watchId = navigator.geolocation.watchPosition(onSuccess,
+                                                  onError,
+                                                  { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true } );
 
       },
       dismiss: function( e ) {
-        console.log( "dismiss ", e );        
+        console.log( "dismiss ", e );     
+
+        if( this._watchId != null ) {
+          navigator.geolocation.clearWatch(this._watchID);
+          this._watchID = null;
+        }   
       }
 
     });
