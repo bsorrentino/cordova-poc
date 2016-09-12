@@ -1,0 +1,81 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="cordova.html">
+
+<!--
+`cordova-media-capture`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="cordova-media-capture">
+  <template>
+    <style>
+      .row.margin {
+        margin-bottom: 0px;
+      }
+
+    </style>
+      <div class="row margin">
+      <div class="col s12">
+
+      <div class="card z-depth-1 indigo lighten-5">
+
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4 " on-tap="reveal">Get Picture<i class="material-icons right">more_vert</i></span>
+            <p>cordova-plugin-media-capture</p>
+
+          </div>
+
+        <!--  
+        <div class="card-reveal  indigo darken-1">
+
+            <span class="card-title white-text text-darken-1">Network<i class="material-icons right">close</i></span>    
+          
+            <table>
+              <tbody>
+                <tr>
+                  <td class="yellow-text text-darken-1">Connection:<span class="white-text text-darken-1" style="margin-left:10px">[[status]]</span></td>
+                </tr>
+              </tbody>
+          </table>  
+              
+        </div>
+        -->
+
+      </div> 
+      </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'cordova-media-capture',
+
+      properties: {
+      },
+      reveal: function( e ) {
+        console.log( "reveal ", e );
+        this._capture();
+      },
+      _capture: function() {
+
+        var self = this;
+
+        var onSuccess = function( mediaFiles ) {
+          console.log( "success", mediaFiles.length );
+        }
+
+        var onError = function(e) {
+          if( navigator.notification ) {
+            navigator.notification.alert('Error code: ' + e.code, null, 'Capture Error');
+          }
+          console.log( 'Capture Error', "Error code: ", e.code);
+        }
+
+        navigator.device.capture.captureImage( onSuccess, onError, {limit:2} );
+
+      }
+    });
+  </script>
+</dom-module>
