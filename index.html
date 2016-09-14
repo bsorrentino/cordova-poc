@@ -22,6 +22,8 @@
      <link rel="import" href="cordova-network.html">
      <link rel="import" href="cordova-geolocation.html">
      <link rel="import" href="cordova-media-capture.html">
+     <link rel="import" href="cordova-vibrate.html">
+     <link rel="import" href="cordova-beep.html">
 
   </head>
   <body>
@@ -32,6 +34,11 @@
       }
     </script>
     <cordova-device></cordova-device>
+
+    <div class="row">
+      <div class="col s3"><cordova-vibrate duration="4000"></cordova-vibrate></div>
+      <div class="col s3"><cordova-beep times="2"></cordova-beep></div>
+    </div>
     <cordova-network></cordova-network>
     <cordova-accellerator></cordova-accellerator>
     <cordova-compass></cordova-compass>
