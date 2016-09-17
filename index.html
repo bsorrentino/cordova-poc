@@ -2,61 +2,18 @@
 
 <html>
   <head>
-    <title>cordova-poc-showcase</title>
+    <title>cordova-poc</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="manifest" href="/manifest.json">
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 
-    <style type="text/css">
-    * {
-        -webkit-touch-callout: none;
-        -webkit-user-select: none; /* Disable selection/copy in UIWebView */
-    }
-    </style>
+    <link rel="import" href="/src/main-app/main-app.html">
 
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-     <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js"></script>
-
-     <link rel="import" href="cordova-device.html">
-     <link rel="import" href="cordova-accellerator.html">
-     <link rel="import" href="cordova-compass.html">
-     <link rel="import" href="cordova-network.html">
-     <link rel="import" href="cordova-geolocation.html">
-     <link rel="import" href="cordova-media-capture.html">
-     <link rel="import" href="cordova-vibrate.html">
-     <link rel="import" href="cordova-beep.html">
-
+    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
   </head>
-  <body>
+  <body class="fullbleed vertical layout" style="background-color:gray;">
 
-<script type="text/javascript">
-</script>
-<cordova-device></cordova-device>
-<div class="row" style="margin-bottom: 0px;">
-  <div class="col s12">
-    <div class="card z-depth-1 indigo lighten-5">
-      <div class="card-content">
-        <div class="row">
-          <div class="col s4"><cordova-vibrate duration="4000"></cordova-vibrate></div>
-          <div class="col s4"><cordova-beep times="1"></cordova-beep></div>
-          <div class="col s4"><cordova-media-capture></cordova-media-capture></div>
-        </div>
-      </div>  
-    </div>
-  </div>
-</div>
-<cordova-network></cordova-network>
-<cordova-accellerator></cordova-accellerator>
-<!--
-<cordova-compass></cordova-compass>
--->
-<cordova-geolocation></cordova-geolocation>
-    
+    <main-app></main-app>
   </body>
 </html>

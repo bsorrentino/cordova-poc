@@ -1,4 +1,4 @@
-# \<cordova-accellerator\>
+# \<cordova-poc\>
 
 
 

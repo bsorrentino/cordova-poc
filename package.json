@@ -1,16 +1,14 @@
 {
-  "name": "cordova-poc-showcase",
+  "name": "polymer",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "MIT",
+  "author": "bsorrentino <bartolomeo.sorrentino@gmail.com> (http://soulsoftware-bsc.blogspot.it/)",
+  "license": "ISC",
   "dependencies": {
-  },
-  "devDependencies": {
     "bower": "^1.7.9",
     "polymer-cli": "^0.16.0"
   }
