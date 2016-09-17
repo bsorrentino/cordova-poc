@@ -58,31 +58,35 @@
           value: { coords:{ latitude:0.0, longitude:0.0 }, timespamp:null},
         },
       },
-      _watchId:null,  
-      _error: function( e ) {
-        console.log( this.is, "error", e.code, e.description );
-      },
-      _success: function( e ) {
-        console.log( "position", e.coords.latitude, this.position.coords.latitude );
-        this.position = e
-      },
+      _watchID:null,  
       reveal: function( e ) {
         console.log( "reveal ", e );
 
-        var onSuccess = this._success.bind(this);
-        var onError   = this._error.bind(this);
+        var self = this;
+
+        if( self._watchID != null ) return;
+
+        var onSuccess = function( e ) {
+          self.position = e
+        }
+
+        var onError   = function( e ) {
+          console.log( self.is, "error", e.code, e.description );
+          alert( "error " + e.code + "\n" + e.description)
+        }
 
         //navigator.geolocation.getCurrentPosition( onSuccess, onError , {});
 
-        this._watchId = navigator.geolocation.watchPosition(onSuccess,
+        this._watchID = navigator.geolocation.watchPosition(
+                                                  onSuccess,
                                                   onError,
-                                                  { maximumAge: 3000, timeout: 5000, enableHighAccuracy: true } );
+                                                  {} );
 
       },
       dismiss: function( e ) {
         console.log( "dismiss ", e );     
 
-        if( this._watchId != null ) {
+        if( this._watchID != null ) {
           navigator.geolocation.clearWatch(this._watchID);
           this._watchID = null;
         }   

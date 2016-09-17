@@ -11,40 +11,20 @@
 <dom-module id="cordova-media-capture">
   <template>
     <style>
-      .row.margin {
-        margin-bottom: 0px;
+      :host {
+        display: block;
       }
 
     </style>
-      <div class="row margin">
-      <div class="col s12">
-
-      <div class="card z-depth-1 indigo lighten-5">
-
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4 " on-tap="reveal">Get Picture<i class="material-icons right">more_vert</i></span>
-            <p>cordova-plugin-media-capture</p>
-
-          </div>
-
-        <!--  
-        <div class="card-reveal  indigo darken-1">
-
-            <span class="card-title white-text text-darken-1">Network<i class="material-icons right">close</i></span>    
-          
-            <table>
-              <tbody>
-                <tr>
-                  <td class="yellow-text text-darken-1">Connection:<span class="white-text text-darken-1" style="margin-left:10px">[[status]]</span></td>
-                </tr>
-              </tbody>
-          </table>  
-              
-        </div>
-        -->
-
-      </div> 
-      </div>
+    <!--
+    <div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
+      <a class="btn-floating btn-large red">
+        <i class="large material-icons">vibration</i>
+      </a>
+    </div>
+    --> 
+    <a class="btn-floating btn-large waves-effect waves-light red" on-tap="takePicture"><i class="material-icons">add_a_photo</i></a>
+    
   </template>
 
   <script>
@@ -54,28 +34,30 @@
 
       properties: {
       },
-      reveal: function( e ) {
-        console.log( "reveal ", e );
-        this._capture();
-      },
-      _capture: function() {
+      takePicture: function( e ) {
+        console.log( "takePicture ", e );
 
         var self = this;
 
         var onSuccess = function( mediaFiles ) {
           console.log( "success", mediaFiles.length );
+
+          alert( 'Image acquired! \n' + mediaFiles[0].fullPath );
+          //navigator.notification.alert('Image acquired! \n' + mediaFiles[0].fullPath , null, 'Take Picture');
         }
 
         var onError = function(e) {
-          if( navigator.notification ) {
-            navigator.notification.alert('Error code: ' + e.code, null, 'Capture Error');
-          }
-          console.log( 'Capture Error', "Error code: ", e.code);
+
+            console.log( 'Capture Error', "code: ", e.code );
+            alert( 'Error code: ' + e.code );
+            //navigator.notification.alert('Error code: ' + e.code, null, 'Capture Error');
         }
 
-        navigator.device.capture.captureImage( onSuccess, onError, {limit:2} );
+        navigator.device.capture.captureImage( onSuccess, onError, {limit:1} );
 
       }
     });
   </script>
 </dom-module>
+
+
