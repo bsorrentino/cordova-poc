@@ -1,0 +1,51 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-icons/notification-icons.html">
+<link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="cordova.html">
+
+<!--
+`cordova-vibrate`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="cordova-vibrate">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <paper-fab icon="notification:vibration" on-tap="vibrate"></paper-fab>
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'cordova-vibrate',
+
+      properties: {
+        duration: {
+          type: Number,
+          value: 3000,
+        },
+
+      },
+      ready: function() {
+        console.log( this.is, "ready");
+      },
+      vibrate: function() {
+        try {
+          console.log( "vibrate", this.duration);
+          navigator.vibrate(this.duration);
+        }
+        catch( e ) {
+          console.log( "error on vibration");
+        }
+      }
+
+    });
+  </script>
+</dom-module>

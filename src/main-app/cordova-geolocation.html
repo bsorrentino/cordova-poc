@@ -1,0 +1,112 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="cordova.html">
+
+<!--
+`cordova-geolacation`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="cordova-geolocation">
+  <style include="iron-flex iron-flex-alignment"></style>
+  <template>
+    <style>
+      :host {
+        display: block;
+
+        --paper-card-content: {
+            @apply(--layout-vertical);
+            @apply(--layout-justified);
+        }
+
+        --paper-card: {
+          width:100%;
+        }
+
+      }
+      .row {
+          @apply(--layout-horizontal);
+          margin: 5px 5px;
+      }
+      .row span {
+          @apply(--layout-flex);
+      }
+      .row .label {
+          @apply(--layout-self-start);
+      }
+      .row .value {
+          @apply(--layout-self-end);
+      }
+
+    </style>
+
+      <paper-card elevation="2" heading="Geolocation">
+        <div class="card-content">  
+
+                <div class="row">
+                  <span class="label">Latitude:</span><span class="value">[[position.coords.latitude]]</span>
+                </div> 
+                <div class="row">
+                  <span class="label">Longitude:</span><span class="value">[[position.coords.longitude]]</span>
+                </div> 
+            
+        </div>
+      </paper-card>
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'cordova-geolocation',
+
+      properties: {
+        position: {
+          type: Object,
+          value: { coords:{ latitude:0.0, longitude:0.0 }, timespamp:null},
+        },
+      },
+      ready: function() {
+        console.log( this.is, "ready");
+        this.watch();
+      },  
+      _watchID:null,
+      watch: function() {
+        console.log( "watch " );
+
+        var self = this;
+
+        if( self._watchID != null ) return;
+
+        var onSuccess = function( e ) {
+          self.position = e
+        }
+
+        var onError   = function( e ) {
+          console.log( self.is, "error", e.code, e.description );
+          //alert( "error " + e.code + "\n" + e.description)
+        }
+
+        //navigator.geolocation.getCurrentPosition( onSuccess, onError , {});
+
+        this._watchID = navigator.geolocation.watchPosition(
+                                                  onSuccess,
+                                                  onError,
+                                                  {} );
+
+      },
+      dismiss: function( e ) {
+        console.log( "dismiss ", e );     
+
+        if( this._watchID != null ) {
+          navigator.geolocation.clearWatch(this._watchID);
+          this._watchID = null;
+        }   
+      }
+
+    });
+  </script>
+</dom-module>

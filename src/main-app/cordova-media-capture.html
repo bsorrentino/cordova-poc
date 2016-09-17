@@ -1,0 +1,64 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/iron-icons/image-icons.html">
+
+<link rel="import" href="cordova.html">
+
+<!--
+`cordova-media-capture`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="cordova-media-capture">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+    </style>
+    <paper-fab icon="image:add-a-photo" on-tap="takePicture"></paper-fab>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'cordova-media-capture',
+
+      properties: {
+      },
+      takePicture: function( e ) {
+        console.log( "takePicture ", e );
+
+        var self = this;
+
+        var onSuccess = function( mediaFiles ) {
+          console.log( "success", mediaFiles.length );
+
+          alert( 'Image acquired! \n' + mediaFiles[0].fullPath );
+          //navigator.notification.alert('Image acquired! \n' + mediaFiles[0].fullPath , null, 'Take Picture');
+        }
+
+        var onError = function(e) {
+
+            console.log( 'Capture Error', "code: ", e.code );
+            alert( 'Error code: ' + e.code );
+            //navigator.notification.alert('Error code: ' + e.code, null, 'Capture Error');
+        }
+
+        try {
+
+        navigator.device.capture.captureImage( onSuccess, onError, {limit:1} );
+
+        } catch( e ) {
+          console.log( this.is, "error invoking device.capture");
+        }
+
+      }
+    });
+  </script>
+</dom-module>
+
+

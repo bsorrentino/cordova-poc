@@ -1,0 +1,54 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/iron-icons/social-icons.html">
+
+
+<link rel="import" href="cordova.html">
+
+
+<!--
+`cordova-beep`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="cordova-beep">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+    </style>
+    <paper-fab icon="social:notifications-active" on-tap="beep"></paper-fab>
+    
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'cordova-beep',
+
+      properties: {
+        times: {
+          type: Number,
+          value: 1,
+        },
+       },
+      ready: function() {
+        console.log( this.is, "ready");
+      },
+      beep: function(e) {
+        try {
+          console.log( "beep", this.times );
+          navigator.notification.beep(this.times);
+        }
+        catch( e ) {
+          console.log( "error on beep");
+        }
+      }
+
+    });
+  </script>
+</dom-module>

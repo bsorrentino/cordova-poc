@@ -1,0 +1,89 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="cordova.html">
+
+<!--
+`cordova-accellerator`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="cordova-accellerator">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      .row.margin {
+        margin-bottom: 0px;
+      }
+
+    </style>
+      <div class="row margin">
+
+      <div class="col s12">
+
+      <div class="card z-depth-1 indigo lighten-5">
+          <div class="card-content"> <!--waves-effect waves-block-->
+            <span class="card-title activator grey-text text-darken-4" on-tap="reveal" >Accellerometer<i class="material-icons right">more_vert</i></span>
+            <p>cordova-plugin-device-motion</p>
+            <br/>
+            <br/>
+          </div>
+          
+        <div class="card-reveal indigo darken-1">
+
+            <span class="card-title white-text text-darken-1" on-tap="dismiss">Accellerometer<i class="material-icons right">close</i></span>    
+          
+            <div class="row">
+                  <div class="col s12 m6"><span class="yellow-text text-darken-1">X:</span><span class="white-text text-darken-1">[[accelleration.x]]</span></div> 
+                  <div class="col s12 m6"><span class="yellow-text text-darken-1">Y:</span><span class="white-text text-darken-1">[[accelleration.x]]</span></div> 
+                  <div class="col s12 m6"><span class="yellow-text text-darken-1">Z:</span><span class="white-text text-darken-1">[[accelleration.z]]</span></div> 
+            </div>
+
+        </div>
+        
+      </div>   
+      </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'cordova-accellerator',
+
+      properties: {
+        accelleration: {
+          type: Object,
+          value: { x:0.0, y:0.0, z:0.0, timestamp:null },
+        },
+      },
+      _watchID:null,
+      reveal: function( e ) {
+        console.log( "reveal ", e );
+
+        var self = this;
+
+        if( self._watchID != null ) return;
+
+        var onSuccess = function( e ) {
+          self.accelleration = e
+        }
+        var onError = function( e ) {
+          alert( "error " + e);
+        }
+
+        this._watchID = navigator.accelerometer.watchAcceleration( onSuccess, onError, {} );
+
+      },
+      dismiss: function( e ) {
+        console.log( "dismiss ", e );        
+        if( this._watchID != null ) {
+          navigator.accelerometer.clearWatch(this._watchID);
+          this._watchID = null;
+        }   
+      }
+
+    });
+  </script>
+</dom-module>

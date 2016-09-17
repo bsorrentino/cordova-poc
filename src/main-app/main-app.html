@@ -1,0 +1,81 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="cordova.html">
+<link rel="import" href="cordova-device.html">
+<link rel="import" href="cordova-vibrate.html">
+<link rel="import" href="cordova-beep.html">
+<link rel="import" href="cordova-media-capture.html">
+<link rel="import" href="cordova-geolocation.html">
+
+<dom-module id="main-app">
+  <style include="iron-flex iron-flex-alignment"></style>
+  
+  <template>
+    <style>
+      :host {
+        display: block;
+
+        --paper-card-content: {
+          @apply(--layout-horizontal);
+          @apply(--layout-justified);
+        }
+
+        --paper-card: {
+          width:100%;
+        }
+      }  
+
+      .row {
+        margin-bottom: 10px;
+      }  
+    </style>
+
+    <div class="layout vertical">
+
+      <div class="row">
+        <cordova-device></cordova-device>
+      </div>
+
+      <div class="row">
+        <paper-card elevation="2">
+          <div class="card-content">  
+            <cordova-vibrate duration="4000"></cordova-vibrate>
+            <cordova-beep times="1"></cordova-beep>
+            <cordova-media-capture></cordova-media-capture>
+          </div>
+        </paper-card>
+      </div>
+
+      <div class="row">
+      <cordova-geolocation></cordova-geolocation>
+      </div>
+
+      <div class="row">
+        <paper-card >
+          <div class="card-content" elevation="2">  
+
+          </div>
+        </paper-card>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'main-app',
+
+      properties: {
+      },
+      vibrate: function( e ) {
+        console.log( this.is, "vibrate" );
+      }
+    });
+  </script>
+</dom-module>

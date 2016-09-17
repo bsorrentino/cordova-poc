@@ -1,0 +1,121 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-styles/typography.html">
+<link rel="import" href="cordova.html">
+
+<!--
+`cordova-accellerator`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="cordova-device">
+  <style include="iron-flex iron-flex-alignment"></style>
+  <template>
+    <style>
+      :host {
+        display: block;
+
+        --paper-card-content: {
+            @apply(--layout-vertical);
+            @apply(--layout-justified);
+        }
+
+        --paper-card: {
+          width:100%;
+          background-color: var(--paper-yellow-100);
+        }
+
+      }
+
+      .row {
+          @apply(--layout-horizontal);
+          margin-bottom: 10px;
+      }
+      .wrap {
+          @apply(--layout-wrap);
+      }
+      .row div {
+          margin-right:5px;
+          @apply(--paper-font-common-nowrap);        
+      }
+      .row .uuid {
+        @apply(--paper-font-body1);
+      }
+      .row span {
+          @apply(--layout-flex);
+          margin-right:5px;
+          white-space:nowrap;
+      }
+      .row .label {
+      }
+      .row .value {
+          @apply(--layout-self-start);
+          @apply(--layout-self-end);
+      }
+    </style>
+
+      <paper-card elevation="2" heading="Device Info">
+        <div class="card-content">  
+
+            <div class="row wrap">
+              <div>UUID:</div>
+              <div class="uuid">[[device.uuid]]</div>
+            </div>
+
+            <div class="row">
+              <span class="label">Platform</span><span>[[device.platform]]</span>
+              <span class="label">Version</span><span>[[device.version]]</span>            
+            </div>
+            <div class="row">
+              <span class="label">Model:</span><span>[[device.model]]</span>
+            </div>
+            <div class="row"> 
+              <span class="label">Screen:</span><span style="white-space: nowrap;">[[screen.width]] x [[screen.height]]</span> 
+              <span class="label">Color Depth:</span><span>[[screen.colorDepth]]</span> 
+            </div>
+             
+        </div>
+      </paper-card>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'cordova-device',
+
+      properties: {
+
+        device: {
+          type: Object,
+          value: { uuid:"xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx", platform:"Unknown", version:"0", model:"unknown" } 
+        },
+        screen: {
+          type: Object,
+          value: { width:0, height:0, colorDepth:0}
+        },
+      },
+      ready: function() {
+        console.log( "cordova-device", "ready" );
+
+        var _self = this;
+
+        document.addEventListener("deviceready", function() {
+    
+          console.log( "cordova is ready!" );
+
+          try {
+            _self.device = device;
+            _self.screen = screen;
+          }
+          catch( e ) {
+          }
+
+        }, true);
+
+      }
+    });
+  </script>
+</dom-module>
