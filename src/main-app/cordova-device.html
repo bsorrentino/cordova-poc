@@ -37,23 +37,18 @@
       .wrap {
           @apply(--layout-wrap);
       }
-      .row div {
-          margin-right:5px;
-          @apply(--paper-font-common-nowrap);        
-      }
       .row .uuid {
-        @apply(--paper-font-body1);
+        @apply(--paper-font-common-base);
+        @apply(--paper-font-common-nowrap);   
+        margin-right:2px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
       }
       .row span {
           @apply(--layout-flex);
-          margin-right:5px;
-          white-space:nowrap;
-      }
-      .row .label {
-      }
-      .row .value {
-          @apply(--layout-self-start);
-          @apply(--layout-self-end);
+          white-space: nowrap;
+          margin-right:2px;
       }
     </style>
 
@@ -61,20 +56,20 @@
         <div class="card-content">  
 
             <div class="row wrap">
-              <div>UUID:</div>
+              <span>UUID:</span>
               <div class="uuid">[[device.uuid]]</div>
             </div>
 
             <div class="row">
-              <span class="label">Platform</span><span>[[device.platform]]</span>
-              <span class="label">Version</span><span>[[device.version]]</span>            
+              <span>Platform:</span><span>[[device.platform]]</span>
+              <span>Version:</span><span>[[device.version]]</span>            
             </div>
             <div class="row">
               <span class="label">Model:</span><span>[[device.model]]</span>
             </div>
-            <div class="row"> 
-              <span class="label">Screen:</span><span style="white-space: nowrap;">[[screen.width]] x [[screen.height]]</span> 
-              <span class="label">Color Depth:</span><span>[[screen.colorDepth]]</span> 
+            <div class="row wrap"> 
+              <span>Screen:</span><span>[[screen.width]] x [[screen.height]]</span> 
+              <span>Color Depth:</span><span>[[screen.colorDepth]]</span> 
             </div>
              
         </div>
@@ -90,7 +85,7 @@
 
         device: {
           type: Object,
-          value: { uuid:"xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx", platform:"Unknown", version:"0", model:"unknown" } 
+          value: { uuid:"XXXXXXXXX-XXXX-MXXX-NXXX-XXXXXXXXXXXX", platform:"Unknown", version:"0", model:"unknown" } 
         },
         screen: {
           type: Object,
