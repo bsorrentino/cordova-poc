@@ -29,7 +29,6 @@
         }
 
       }
-
       .row {
           @apply(--layout-horizontal);
           margin-bottom: 10px;
@@ -46,11 +45,13 @@
         line-height: 20px;
       }
       .row span {
-          @apply(--layout-flex);
           white-space: nowrap;
           margin-right:2px;
       }
-      .row .value {
+      .flex {
+          @apply(--layout-flex);
+      }
+      .value {
         color: var(--paper-pink-500);
       }
     </style>
@@ -59,16 +60,16 @@
         <div class="card-content">  
 
             <div class="row wrap">
-              <span>UUID:</span>
-              <div class="uuid value">[[device.uuid]]</div>
+              <span class="col">UUID:</span>
+              <span class="col uuid value">[[device.uuid]]</span>
             </div>
 
             <div class="row">
-              <span>Platform:</span><span class="value">[[device.platform]]</span>
-              <span>Version:</span><span class="value">[[device.version]]</span>            
+              <span class="flex">Platform:</span><span class="flex value">[[device.platform]]</span>
+              <span class="flex">Version:</span><span class="flex value">[[device.version]]</span>            
             </div>
             <div class="row">
-              <span class="label">Model:</span><span class="value">[[device.model]]</span>
+              <span class="flex">Model:</span><span class="flex value">[[device.model]]</span>
             </div>
             <div class="row wrap"> 
               <span>Screen:</span><span class="value">[[screen.width]] x [[screen.height]]</span> 

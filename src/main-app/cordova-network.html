@@ -21,10 +21,10 @@
 
       .row {
           @apply(--layout-horizontal);
+          @apply(--layout-flex);
       }
       .row span {
-          @apply(--layout-flex);
-          margin-right: 5px;
+        margin-right: 5px;
       }
       .row .label {
       }
@@ -41,7 +41,8 @@
         <div class="card-content">  
 
         <div class="row">
-          <span class="label">Connection:</span><span class="value">[[status]]</span>
+          <span class="label">Connection:</span>
+          <span class="value">[[status]]</span>
         </div> 
             
         </div>
@@ -60,13 +61,19 @@
       properties: {
         status: {
           type: String,
-          value: 'Unknown connection',
+          value: 'Unknown',
         },
       },
       ready: function(e) {
-        this.check( e );
+
+        var self = this;
+
+        document.addEventListener("deviceready", function() {
+          self.check( e );
+        });
       },
       check: function() {
+
         console.log( "Check Network");
         var networkState = navigator.network.connection.type;
 
