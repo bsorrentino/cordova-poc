@@ -1,6 +1,8 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-styles/color.html">
+
 <link rel="import" href="cordova.html">
 
 <!--
@@ -22,6 +24,10 @@
             @apply(--layout-justified);
         }
 
+        --paper-card-actions: {
+            @apply(--layout-horizontal);
+            @apply(--layout-justified);          
+        }
         --paper-card: {
           width:100%;
         }
@@ -40,7 +46,12 @@
       .row .value {
           @apply(--layout-self-end);
       }
-
+      .watch {
+        color: var(--google-blue-500);
+      }
+      .dismiss {
+        color: var(--google-red-500);
+      }
     </style>
 
       <paper-card elevation="2" heading="Geolocation">
@@ -53,6 +64,10 @@
                   <span class="label">Longitude:</span><span class="value">[[position.coords.longitude]]</span>
                 </div> 
             
+        </div>
+        <div class="card-actions">
+          <paper-button class="watch" on-tap="watch">Start Watch</paper-button>
+          <paper-button class="dismiss" on-tap="dismiss">Dismiss</paper-button>
         </div>
       </paper-card>
 
@@ -71,10 +86,10 @@
       },
       ready: function() {
         console.log( this.is, "ready");
-        this.watch();
+        //this.watch();
       },  
       _watchID:null,
-      watch: function() {
+      watch: function( e ) {
         console.log( "watch " );
 
         var self = this;

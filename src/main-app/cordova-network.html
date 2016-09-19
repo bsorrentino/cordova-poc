@@ -1,4 +1,7 @@
-<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-styles/color.html">
+<link rel="import" href="../../bower_components/paper-styles/typography.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="cordova.html">
 
 <!--
@@ -9,39 +12,44 @@
 -->
 
 <dom-module id="cordova-network">
+  <style include="iron-flex iron-flex-alignment"></style>
   <template>
     <style>
-      .row.margin {
-        margin-bottom: 0px;
+      :host {
+        display: block;
+      }
+
+      .row {
+          @apply(--layout-horizontal);
+      }
+      .row span {
+          @apply(--layout-flex);
+          margin-right: 5px;
+      }
+      .row .label {
+      }
+      .row .value {
+          @apply(--paper-font-common-nowrap);   
+          color: var(--paper-purple-500);
+      }
+      .check {
+        color: var(--google-blue-500);
       }
 
     </style>
-      <div class="row margin">
-      <div class="col s12">
+      <paper-card elevation="2" heading="Nework Info">
+        <div class="card-content">  
 
-      <div class="card z-depth-1 indigo lighten-5">
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4 " on-tap="reveal">Check Network<i class="material-icons right">more_vert</i></span>
-            <p>Get Nework Info</p>
-
-          </div>
-          
-        <div class="card-reveal  indigo darken-1">
-
-            <span class="card-title white-text text-darken-1">Network<i class="material-icons right">close</i></span>    
-          
-            <table>
-              <tbody>
-                <tr>
-                  <td class="yellow-text text-darken-1">Connection:<span class="white-text text-darken-1" style="margin-left:10px">[[status]]</span></td>
-                </tr>
-              </tbody>
-          </table>  
-              
+        <div class="row">
+          <span class="label">Connection:</span><span class="value">[[status]]</span>
+        </div> 
+            
         </div>
-        
-      </div> 
-      </div>
+        <div class="card-actions">
+          <paper-button class="check" on-tap="check">Check</paper-button>
+        </div>
+      </paper-card>
+ 
   </template>
 
   <script>
@@ -55,22 +63,21 @@
           value: 'Unknown connection',
         },
       },
-      reveal: function( e ) {
-        console.log( "reveal ", e );
-
-        this.check_network();
+      ready: function(e) {
+        this.check( e );
       },
-      check_network: function() {
+      check: function() {
+        console.log( "Check Network");
         var networkState = navigator.network.connection.type;
 
         var states = {};
-        states[Connection.UNKNOWN]  = 'Unknown connection';
-        states[Connection.ETHERNET] = 'Ethernet connection';
-        states[Connection.WIFI]     = 'WiFi connection';
-        states[Connection.CELL_2G]  = 'Cell 2G connection';
-        states[Connection.CELL_3G]  = 'Cell 3G connection';
-        states[Connection.CELL_4G]  = 'Cell 4G connection';
-        states[Connection.NONE]     = 'No network connection';
+        states[Connection.UNKNOWN]  = 'Unknown';
+        states[Connection.ETHERNET] = 'Ethernet';
+        states[Connection.WIFI]     = 'WiFi';
+        states[Connection.CELL_2G]  = 'Cell 2G';
+        states[Connection.CELL_3G]  = 'Cell 3G';
+        states[Connection.CELL_4G]  = 'Cell 4G';
+        states[Connection.NONE]     = 'No network';
 
         this.status =  states[networkState];
 
