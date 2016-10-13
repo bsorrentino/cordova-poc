@@ -1,0 +1,59 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/iron-icons/social-icons.html">
+<link rel="import" href="../../bower_components/paper-material/paper-material.html">
+<link rel="import" href="../../bower_components/battery-status-icon/battery-status-icon.html">
+
+
+<link rel="import" href="cordova.html">
+
+
+<!--
+`cordova-battery`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="cordova-battery">
+  <template>
+    <style>
+      :host {
+        display: block;
+        --battery-icon-size: 56px;
+      }
+
+    </style>
+      <paper-material elevation="3">
+        <battery-status-icon id="theBattery" autodetect></battery-status-icon>
+      </paper-material>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'cordova-battery',
+
+      properties: {
+      },
+      ready: function() {
+        console.log( this.is, "ready");
+
+        var self = this;
+
+        function onBatteryStatus(status) {
+          console.log("battery Level: " + status.level + " isPlugged: " + status.isPlugged);
+          self.$.theBattery.level = status.level;
+        } 
+
+        document.addEventListener("deviceready", function() {
+          
+          window.addEventListener("batterystatus", onBatteryStatus, false) 
+
+        }, true);
+
+      }
+
+    });
+  </script>
+</dom-module>

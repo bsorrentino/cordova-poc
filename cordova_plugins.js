@@ -527,6 +527,14 @@ module.exports = [
         "clobbers": [
             "navigator.splashscreen"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-battery-status/www/battery.js",
+        "id": "cordova-plugin-battery-status.battery",
+        "pluginId": "cordova-plugin-battery-status",
+        "clobbers": [
+            "navigator.battery"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -549,7 +557,8 @@ module.exports.metadata =
     "cordova-plugin-network-information": "1.2.0",
     "cordova-plugin-vibration": "2.1.0",
     "cordova-plugin-whitelist": "1.2.2",
-    "org.apache.cordova.splashscreen": "0.2.2"
+    "org.apache.cordova.splashscreen": "0.2.2",
+    "cordova-plugin-battery-status": "1.2.0"
 }
 // BOTTOM OF METADATA
 });

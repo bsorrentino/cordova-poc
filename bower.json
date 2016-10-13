@@ -7,7 +7,8 @@
     "paper-drawer-panel": "PolymerElements/paper-drawer-panel#^1.0.10",
     "paper-fab": "PolymerElements/paper-fab#^1.2.0",
     "iron-icon": "PolymerElements/iron-icon#^1.0.10",
-    "paper-card": "PolymerElements/paper-card#^1.1.2"
+    "paper-card": "PolymerElements/paper-card#^1.1.2",
+    "battery-status-icon": "^0.0.6"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
