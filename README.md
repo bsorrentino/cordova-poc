@@ -1,5 +1,15 @@
-<table>
 
+> <span style='color:red'>**ANNOUNCEMENT**</span>:
+>
+> on Apr 24, 2019 the IOS version of this app has been removed by App Store
+> from Apple for the reasons state below
+>
+>Your app appears to be designed for clients or users to preview apps prior to being >submitted to the App Store for review. This type of design allows you to change your >app’s behavior or functionality to differ from the intended and advertised primary purpose of your app, which is not in compliance with [App Store Review Guideline 2.5.2](App Store Review Guideline 2.5.2) and section 3.3.2 of the [Apple Developer Program License Agreement](https://developer.apple.com/terms/).
+>
+>For this reason, your app will be removed from the App Store. Customers who have previously downloaded this app will continue to have access to it on their devices and will have access to any available in-app purchase products.
+
+
+<table>
 <tr>
 <td>
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/hi-res-icon2@512.png">
@@ -8,9 +18,7 @@
  <img src="https://raw.github.com/bsorrentino/cordova-poc/master/src/site/hi-res-icon@512.png">
 </td>
 </tr>
-
 </table>
-
 
 # DESCRIPTION
 
